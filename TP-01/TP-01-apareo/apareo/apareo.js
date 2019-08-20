@@ -140,7 +140,7 @@ combinarNArrays([
  * @returns {number} el indice del menor valor
  */
 function findMin(valores) {
-  let minimo = Math.min.apply(0, valores);
+  let minimo = Math.min(...valores);
   let index = valores.indexOf(minimo);
   console.log("El minimo es " + minimo);
   console.log("Esta en la posicion " + index);
