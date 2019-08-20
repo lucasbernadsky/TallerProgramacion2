@@ -100,18 +100,18 @@ function transformarArrayDeNumerosAUnSoloString(arr, separador) {
 function combinarDosArrays(arrA, arrB) {
   var arrCombinado = arrA.concat(arrB);
   arrCombinado = arrCombinado.sort(comparar);
-  console.log(arrCombinado);
+
+  return arrCombinado.toString();
 }
 function comparar(a, b) {
   return a - b;
 }
-
-/**combinarDosArrays(
-  [Number.MAX_VALUE, Number.MIN_VALUE, 22, 2, 34342, 19],
-  [1241, 14]
-); 
-test commit
-*/
+console.log(
+  combinarDosArrays(
+    [Number.MAX_SAFE_INTEGER, Number.MIN_SAFE_INTEGER, 22, 2, 34342, 19],
+    [1241, 14]
+  )
+);
 
 /**
  * toma un array de muchos arrays de números ordenados y los combina en uno solo, aún ordenado
