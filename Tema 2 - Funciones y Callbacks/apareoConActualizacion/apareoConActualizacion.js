@@ -1,28 +1,34 @@
-const fs = require('fs')
-const util = require('util')
+const fs = require("fs");
+const util = require("util");
 
 /**
  * ordena (in place) una coleccion de datos segun las claves provistas.
  * @param {Object[]} coleccion el array que quiero ordenar
  * @param {string[]} claves las claves por las que quiero ordenar, por orden de importancia
  */
+
 function ordenar(coleccion, claves) {
-	throw new Error('falta implementar!')
+  throw new Error("falta implementar!");
 }
 
 /**
  * recibe las rutas del archivo de deudas original, archivo de pagos, archivo de deudas con las actualizaciones, y archivo de log para registrar errores o advertencias.
- * @param {string} rutaDeudasOld 
- * @param {string} rutaPagos 
- * @param {string} rutaDeudasNew 
- * @param {string} rutaLog 
+ * @param {string} rutaDeudasOld
+ * @param {string} rutaPagos
+ * @param {string} rutaDeudasNew
+ * @param {string} rutaLog
  */
-function actualizarArchivosDeudas(rutaDeudasOld, rutaPagos, rutaDeudasNew, rutaLog) {
-    throw new Error('falta implementar!')
+function actualizarArchivosDeudas(
+  rutaDeudasOld,
+  rutaPagos,
+  rutaDeudasNew,
+  rutaLog
+) {
+  throw new Error("falta implementar!");
 }
 
 /**
- * @callback loggerCallback 
+ * @callback loggerCallback
  * @param {string} error error message to display
  */
 
@@ -34,22 +40,22 @@ function actualizarArchivosDeudas(rutaDeudasOld, rutaPagos, rutaDeudasNew, rutaL
  * @returns {Object[]} las deudas actualizadas
  */
 function actualizarDeudas(deudas, pagos, logger) {
-	throw new Error('falta implementar!')
+  throw new Error("falta implementar!");
 }
 
 /**
- * arma un mensaje informando los detalles de un pago que no corresponde a ninguna deuda 
+ * arma un mensaje informando los detalles de un pago que no corresponde a ninguna deuda
  * @param {Object} pago el pago sin deuda correspondiente
  * @returns {string} el mensaje a loguear
  */
 function armarMsgPagoSinDeudaAsociada(pago) {
-    const logMsg = `
+  const logMsg = `
 el siguiente pago no corresponde a ninguna deuda:
 ${util.inspect(pago)}
 
 =================================
-`
-    return logMsg
+`;
+  return logMsg;
 }
 
 /**
@@ -58,22 +64,22 @@ ${util.inspect(pago)}
  * @returns {string} el mensaje a logguear
  */
 function armarMsgPagoDeMas(deuda) {
-    const logMsg = `
+  const logMsg = `
 dni: ${deuda.dni} posee $${Math.abs(deuda.debe)} a su favor
 
 =================================
-`
-    return logMsg
+`;
+  return logMsg;
 }
 
 /**
  * arma un mensaje mostrando la deuda, y el pago que no se pudo concretar, y notifica que el registro permanece sin cambios.
- * @param {Object} deuda 
+ * @param {Object} deuda
  * @param {Object} pago
  * @returns {string} el mensaje a logguear
  */
 function armarMsgPagoConDatosErroneos(deuda, pago) {
-    const logMsg = `
+  const logMsg = `
 error al querer actualizar esta deuda:
 ${util.inspect(deuda)}
 con este pago:
@@ -82,10 +88,10 @@ ${util.inspect(pago)}
 se mantiene el registro original sin cambios
 
 =================================
-`
-    return logMsg
+`;
+  return logMsg;
 }
 
 module.exports = {
-    actualizarArchivosDeudas
-}
+  actualizarArchivosDeudas
+};
