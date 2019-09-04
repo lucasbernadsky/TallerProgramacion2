@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "0.0.1",
+  "description": "Version beta",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasbernadsky/TallerProgramacion2.git"
+  },
+  "keywords": [
+    "servidor",
+    "web"
+  ],
+  "author": "Lucas Bernadsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasbernadsky/TallerProgramacion2/issues"
+  },
+  "homepage": "https://github.com/lucasbernadsky/TallerProgramacion2#readme"
+}
